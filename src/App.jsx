@@ -3,30 +3,37 @@ import './App.css';
 
 function SearchBar() {
   return (
-    <input type="search" placeholder='  Start small, start here.' />
+    <form className="form-type">
+      <div className="search-area rounded">
+        <input className="input-search rounded" id="search" type="search" placeholder="Start small, start here." />
+        <button type="submit" className="button-search"><i className="fa fa-search"></i></button>
+      </div>
+    </form>
   );
 }
 
 function Slider() {
   return (
-    <div className='slider-container'>
-      <div className='slider-item'>
-        <img src='./public/img/pexels-noratopicals-7038154.jpg' />
-      </div>
-
-      <div className='slider-item'>
-        <img src='./public/img/pexels-saul-rivera-120059439-17605107.jpg' />
-      </div>
-
-      <div className='slider-item'>
-        <img src='./public/img/pexels-noratopicals-7038145.jpg' />
-      </div>
-
-      <div className='slider-controls'>
-        <a className='slider-dot'>1</a>
-        <a className='slider-dot'>2</a>
-        <a className='slider-dot'>3</a>
-
+    <div className="content">
+      <div className="slider-container">
+        <div className="slider-item">
+          <img src="/pexels-noratopicals-7038154.jpg" />
+          <div className="slider-content">
+            <h2 className="color-white">Use your purchasing <span className="allura-regular">power</span> for <span className="allura-regular">positive</span> change</h2>
+          </div>
+        </div>
+        <div className="slider-item">
+          <img src="/pexels-saul-rivera-120059439-17605107.jpg" />
+          <div className="slider-content">
+            <h2 className="color-white">Use your purchasing <span className="allura-regular">power</span> for <span className="allura-regular">positive</span> change</h2>
+          </div>
+        </div>
+        <div className="slider-item">
+          <img src="/pexels-noratopicals-7038145.jpg" />
+          <div className="slider-content">
+            <h2 className="color-white">Use your purchasing <span className="allura-regular">power</span> for <span className="allura-regular">positive</span> change</h2>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -41,6 +48,7 @@ export default function MyApp() {
   return (
     <div>
       <SearchBar />
+      <Slider />
     </div>
   );
 }
