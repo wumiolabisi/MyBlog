@@ -24,6 +24,7 @@
 
 .color-white {
   color: #ffffff;
+  text-shadow: 5px 5px 10px #000000;
 }
 
 h1,
@@ -34,6 +35,15 @@ h2 {
   font-style: normal;
 }
 
+h2 {
+  font-size: 70px;
+}
+
+@media only screen and (max-width:600px) {
+  h2 {
+    font-size: 10vw;
+  }
+}
 
 h3,
 h4,
@@ -105,7 +115,6 @@ body {
   position: absolute;
   top: 0;
   animation: fade 3.5s infinite alternate;
-
 }
 
 .slider-container img {
@@ -120,14 +129,42 @@ body {
   margin: auto;
   text-align: center;
   z-index: 2000;
-  top: 35vh;
-  left: 40%;
-  right: 40%;
+  top: 10vh;
+  left: 15%;
+  right: 15%;
 }
 
 /********
 *
-* INPUTS
+* BUTTONS
+*
+*********/
+a.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100px;
+  height: 40px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+a.btn-primary:hover {
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+
+/********
+*
+* SEARCH BAR
 *
 *********/
 .rounded {
@@ -156,6 +193,10 @@ body {
   background-color: transparent;
 }
 
+.input-search:focus {
+  outline: none;
+}
+
 .button-search {
   background-color: #ffffff00;
   border: 0;
@@ -170,4 +211,55 @@ button.button-search:focus {
 .input-search {
   width: 100%;
   height: 100%;
+}
+
+/********
+*
+* POSTS
+* img-cover, post-area, etc...
+*
+*********/
+.post-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  padding-top: 5%;
+}
+
+.category-title {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.img-cover {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-post-thumbnail {
+  position: relative;
+  top: -25px;
+}
+
+@media only screen and (max-width:600px) {
+  .post-area {
+
+    width: 100%;
+    height: 320px;
+  }
+
+  .post-thumbnail {
+    width: 90%;
+  }
 }

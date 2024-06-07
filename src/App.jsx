@@ -17,30 +17,43 @@ function Slider() {
     <div className="content">
       <div className="slider-container">
         <div className="slider-item">
-          <img src="/pexels-noratopicals-7038154.jpg" />
+          <img src="/pexels-noratopicals-7038234.jpg" />
           <div className="slider-content">
             <h2 className="color-white">Use your purchasing <span className="allura-regular">power</span> for <span className="allura-regular">positive</span> change</h2>
+            <a href="#" class="btn-primary rounded cabin-regular">More&nbsp;<i className="fa fa-arrow-right"></i></a>
           </div>
         </div>
         <div className="slider-item">
-          <img src="/pexels-saul-rivera-120059439-17605107.jpg" />
+          <img src="/pexels-noratopicals-7038224.jpg" />
           <div className="slider-content">
             <h2 className="color-white">Use your purchasing <span className="allura-regular">power</span> for <span className="allura-regular">positive</span> change</h2>
+            <a href="#" class="btn-primary rounded cabin-regular">More&nbsp;<i className="fa fa-arrow-right"></i></a>
           </div>
         </div>
         <div className="slider-item">
-          <img src="/pexels-noratopicals-7038145.jpg" />
+          <img src="/pexels-noratopicals-7038230.jpg" />
           <div className="slider-content">
             <h2 className="color-white">Use your purchasing <span className="allura-regular">power</span> for <span className="allura-regular">positive</span> change</h2>
+            <a href="#" class="btn-primary rounded cabin-regular">More&nbsp;<i className="fa fa-arrow-right"></i></a>
           </div>
         </div>
+
       </div>
     </div>
   );
 }
 
 function Post() {
-  return (<div><p>My post</p></div>
+  return (
+    <div className="post-area">
+      <div className="post-thumbnail">
+        <img className="img-cover" src="/pexels-noratopicals-7038230.jpg" />
+        <a href="#" class="btn-primary btn-post-thumbnail rounded cabin-regular">More&nbsp;<i className="fa fa-arrow-right"></i></a>
+
+      </div>
+      <p className="category-title">UNWASH SUPERSTARS</p>
+
+    </div>
   );
 }
 
@@ -49,6 +62,7 @@ export default function MyApp() {
     <div>
       <SearchBar />
       <Slider />
+      <Post />
     </div>
   );
 }
