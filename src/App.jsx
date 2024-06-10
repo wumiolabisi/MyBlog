@@ -45,14 +45,23 @@ function Slider() {
 
 function Post() {
   return (
-    <div className="post-area">
-      <div className="post-thumbnail">
-        <img className="img-cover" src="/pexels-noratopicals-7038230.jpg" />
+    <div className="columns-2">
+      <div className="post-area">
+        <div className="post-thumbnail">
+          <img className="img-cover" src="/pexels-noratopicals-7038230.jpg" />
+        </div>
         <a href="#" class="btn-primary btn-post-thumbnail rounded cabin-regular">More&nbsp;<i className="fa fa-arrow-right"></i></a>
-
+        <p className="category-title">UNWASH SUPERSTARS</p>
+        <h2>Personal Care Brand Haeckels Pushes Their <span className="allura-regular">Sustainability Efforts</span> Forward</h2>
       </div>
-      <p className="category-title">UNWASH SUPERSTARS</p>
-
+      <div className="post-area">
+        <div className="post-thumbnail">
+          <img className="img-cover" src="/pexels-noratopicals-7038230.jpg" />
+        </div>
+        <a href="#" class="btn-primary btn-post-thumbnail rounded cabin-regular">More&nbsp;<i className="fa fa-arrow-right"></i></a>
+        <p className="category-title">UNWASH SUPERSTARS</p>
+        <h2>Personal Care Brand Haeckels Pushes Their <span className="allura-regular">Sustainability Efforts</span> Forward</h2>
+      </div>
     </div>
   );
 }
