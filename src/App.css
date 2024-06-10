@@ -160,7 +160,7 @@ a.btn-primary {
 }
 
 a.btn-primary:hover {
-  background-color: #ffffff;
+  background-color: transparent;
   color: #000000;
 }
 
@@ -250,7 +250,7 @@ div.post-area:nth-child(even) {
   justify-content: start;
   align-items: center;
   width: 40%;
-  padding: 5% 2%;
+  padding: 30px;
   border: 1px solid #000000;
   margin-top: 2%;
   height: 450px;
@@ -274,6 +274,7 @@ div.post-area:nth-child(even) {
 .post-thumbnail {
   width: 90%;
   height: 300px;
+  flex-shrink: 0;
 }
 
 .btn-post-thumbnail {
