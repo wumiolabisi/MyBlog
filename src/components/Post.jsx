@@ -1,6 +1,6 @@
-export default function Post({ key, img, title, category }) {
+export default function Post({ img, title, category }) {
     return (
-        <div className="post-area" id={key}>
+        <div className="post-area">
             <div className="post-thumbnail">
                 <img className="img-cover" src={img} />
             </div>
