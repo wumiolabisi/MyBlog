@@ -3,7 +3,7 @@ import SearchBar from './components/SearchBar.jsx';
 import Slider from './components/Slider.jsx';
 import Post from './components/Post.jsx';
 import { useFetch } from "./hooks/useFetch.jsx";
-import { differentStyleForTwoWords } from './Utils.js';
+import { differentStyleForTwoWords } from './Utils.jsx';
 
 export default function MyApp() {
 
@@ -25,6 +25,7 @@ export default function MyApp() {
 
         {loading && <div>Chargement...</div>}
         {errors && <div className="alert alert-danger">{errors.toString()}</div>}
+
         {data &&
           data.map(post => (<Post key={post.id} title={differentStyleForTwoWords(post.title, 'allura-regular')} img={imgs[post.id]} category={'Unwashed popular'} />))
         }

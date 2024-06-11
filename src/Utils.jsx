@@ -22,16 +22,26 @@ const randomNumber = (range) => Math.floor(Math.random() * range);
  */
 export const differentStyleForTwoWords = (title = '', classToApply = '') => {
 
-    let splittedTitle, r;
+    let splittedTitle, r, customHTML;
+
 
     splittedTitle = title.split(' ');
 
     for (let i = 0; i < 2; i++) {
         // récup nbre au hasard, dans la limite de la taille du tableau contenant le titre
         r = randomNumber(splittedTitle.length);
-        splittedTitle[r] = '<span className="' + classToApply + '">' + splittedTitle[r] + '</span>';
+        splittedTitle[r] = '<span class="' + classToApply + '">' + splittedTitle[r] + '</span>';
     }
 
-    return splittedTitle.join(" ");
+    const parser = new DOMParser();
+    const html = parser.parseFromString(splittedTitle.join(" "), 'text/html');
+
+    return (
+        <div
+            dangerouslySetInnerHTML={{ __html: html.body.innerHTML }}
+        />
+    );
+
+
 
 }
