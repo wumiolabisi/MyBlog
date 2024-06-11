@@ -7,34 +7,31 @@ const randomNumber = (range) => Math.floor(Math.random() * range);
 
 /**
  * Une fonction permettant de choisir deux mots d'une phrase et d'appliquer un style différent à ces deux mots
- * méthodologie :
+ * -- Méthodologie :
  * Je récup le titre
  * je l'explose
  * Je choisis 2 mots dans ce titre
  * J'applique le style sur ces 2 mots
- * je reconstruit la chaine avec ces 2 mots
- * je renvoie la chaine stylisée
+ * Je remplace le mot stylisé directement => OK
+ * Je renvoie la chaine stylisée
+ *  
+ * @param {string} title 
+ * @param {string} classToApply 
+ * @returns {string}
  * 
  */
 export const differentStyleForTwoWords = (title = '', classToApply = '') => {
 
-    let stylizedTitle = '';
-    let splittedTitle;
-    let array = [];
+    let splittedTitle, r;
 
     splittedTitle = title.split(' ');
 
     for (let i = 0; i < 2; i++) {
-        array.push('<span className="' + classToApply + '">' + splittedTitle[randomNumber(splittedTitle.length)] + '</span>');
-
+        // récup nbre au hasard, dans la limite de la taille du tableau contenant le titre
+        r = randomNumber(splittedTitle.length);
+        splittedTitle[r] = '<span className="' + classToApply + '">' + splittedTitle[r] + '</span>';
     }
 
-    console.log(array);
-
-
-
-
-
-    return stylizedTitle;
+    return splittedTitle.join(" ");
 
 }
