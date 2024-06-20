@@ -17,7 +17,7 @@ const randomNumber = (range) => Math.floor(Math.random() * range);
  *  
  * @param {string} title 
  * @param {string} classToApply 
- * @returns {string}
+ * @returns {html}
  * 
  */
 export const differentStyleForTwoWords = (title = '', classToApply = '') => {
@@ -28,6 +28,7 @@ export const differentStyleForTwoWords = (title = '', classToApply = '') => {
     splittedTitle = title.split(' ');
 
     for (let i = 0; i < 2; i++) {
+
         // récup nbre au hasard, dans la limite de la taille du tableau contenant le titre
         r = randomNumber(splittedTitle.length);
         splittedTitle[r] = '<span class="' + classToApply + '">' + splittedTitle[r] + '</span>';
